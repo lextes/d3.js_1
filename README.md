@@ -24,9 +24,9 @@ Now, with a real example, one where you read the data and immediately generate e
 ```
 var dataset = [ 5, 10, 15, 20, 25 ];	// Array declaration
 d3.select("body").selectAll("p")
-    .data(dataset) 			// dataset variable data
-    .enter() 				// identifies any DOM elements that must be added when the created array is longer 					      than the selection. Therefore it returns an input selection that basically 				  	    represents the elements to be added. It is usually followed by .append which in 					       turn adds elements to the DOM:
-    .append("p")	 		// method to create a new array element.
+    .data(dataset) 		      	// dataset variable data
+    .enter() 				         // identifies any DOM elements that must be added when the created array is longer than the selection. Therefore it returns an input selection that basically represents the elements to be added. It is usually followed by .append which in turn adds elements to the DOM:
+    .append("p")	 		         // method to create a new array element.
     .text("New paragraph!");  		// method to add or modify text
 ```
 
@@ -113,7 +113,6 @@ rect:hover {
     <meta charset="utf-8">
     <title>Example of function D3.js</title>
     <link rel="stylesheet" href="main.css">
-    <script src="http://d3js.org/d3.v3.min.js"></script>
 
   <body>
     <svg width="715" height="315"></svg>
@@ -133,12 +132,12 @@ rect:hover {
 var datos = [135, 100, 150, 125, 225, 175];
 var config = {columnWidth: 55,  columnEsp: 25, margin: 100, height: 300};
 
-  d3.select("svg")  		// select the svg tag and start running the library
-      .selectAll("rect")	// we select all the rectangles
-      .data(datos)       	// we declare the array to use
+  d3.select("svg")  		      // select the svg tag and start running the library
+      .selectAll("rect")     	// we select all the rectangles
+      .data(datos)       	     // we declare the array to use
       .enter().append("rect") 	// if no rectangles with this method are created and added
 
-      // the following are the indications for calculating the different attributes of "rect" and what I want to show as anD example of iteration in a function of D3.js
+                                // the following are the indications for calculating the different attributes of "rect" and what I want to show as anD example of iteration in a function of D3.js
 
       .attr("width", config.columnWidth) 	// we define the "width"
       .attr("x", function(d,i) {   		// calculate the location "x"
